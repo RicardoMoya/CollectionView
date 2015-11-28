@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fkP-dW-UDd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Richard View Controller - Pajaros-->
+        <scene sceneID="dI3-Gk-ouZ">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="Ito-cf-oqE" customClass="RichardViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="pU0-8D-Ky3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="aPM-iw-LFe">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celdaPajaros" id="JI5-wD-gCw" customClass="Celda">
+                                <rect key="frame" x="5" y="5" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mc-jI-4eZ">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="110" id="jjb-jW-PJa"/>
+                                                <constraint firstAttribute="width" constant="140" id="svn-Wo-ox0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbA-XP-nhQ">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="LBw-mc-gkM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cbA-XP-nhQ" firstAttribute="trailing" secondItem="4mc-jI-4eZ" secondAttribute="trailing" type="default" id="1Cr-gE-PzX"/>
+                                    <constraint firstItem="cbA-XP-nhQ" firstAttribute="leading" secondItem="4mc-jI-4eZ" secondAttribute="leading" type="default" id="Qqu-3r-8E1"/>
+                                    <constraint firstAttribute="bottom" secondItem="cbA-XP-nhQ" secondAttribute="bottom" constant="7" id="apt-Da-6Z7"/>
+                                    <constraint firstItem="4mc-jI-4eZ" firstAttribute="top" secondItem="JI5-wD-gCw" secondAttribute="top" constant="5" id="eyZ-bY-LUn"/>
+                                    <constraint firstItem="cbA-XP-nhQ" firstAttribute="centerX" secondItem="JI5-wD-gCw" secondAttribute="centerX" type="default" id="zKJ-NB-JAk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="miImagen" destination="4mc-jI-4eZ" id="dfa-Jj-5j0"/>
+                                    <outlet property="miLabel" destination="cbA-XP-nhQ" id="hRx-OA-bQL"/>
+                                    <segue destination="zQR-jb-DsV" kind="push" identifier="pasarPajaro" id="Gcw-cZ-z4m"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ito-cf-oqE" id="ebd-dq-L2y"/>
+                            <outlet property="delegate" destination="Ito-cf-oqE" id="14W-xn-eER"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Pajaros" id="HpG-Sd-7Z0"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39A-Km-KxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="68"/>
+        </scene>
+        <!--Pantalla2-->
+        <scene sceneID="igP-hB-kyc">
+            <objects>
+                <viewController id="zQR-jb-DsV" customClass="Pantalla2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eTh-hv-QPD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pih-o3-UsB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="REu-PX-y81"/>
+                                    <constraint firstAttribute="width" constant="273" id="evc-5P-VNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pih-o3-UsB" firstAttribute="leading" secondItem="eTh-hv-QPD" secondAttribute="leading" constant="33" id="5Vv-yM-zTG"/>
+                            <constraint firstItem="pih-o3-UsB" firstAttribute="top" secondItem="eTh-hv-QPD" secondAttribute="top" constant="118" id="gQQ-1N-SZ1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="581-me-bIr"/>
+                    <connections>
+                        <outlet property="miLabelPantalla2" destination="pih-o3-UsB" id="q6M-T0-VG4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3I-j8-rBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="68"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TZD-bC-Rqq">
+            <objects>
+                <navigationController id="fkP-dW-UDd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dj4-8z-DR1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ito-cf-oqE" kind="relationship" relationship="rootViewController" id="nb9-kd-d1j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqb-DH-Alm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="68"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
